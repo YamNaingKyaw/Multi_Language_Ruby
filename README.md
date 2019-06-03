@@ -17,7 +17,7 @@ You need Language change setting . Follow me
                 # your routes here...
             end
 
-* Step 5 - application_controller.rb 
+* Step 5 - application_controller.rb \n
          -- before_action :set_locale
             private
                 def set_locale
