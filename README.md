@@ -15,25 +15,21 @@ config.i18n.available_locales = [:en, :ru]
 config.i18n.default_locale = :en
 ```
 
-* Step 3 
-create config/locales ru.yml
+* Step 3 - create config/locales ru.yml
 ```ruby
 ru:
     welcome: "Добро пожаловать!"
 ```
 
-* Step 4 
-routes.rb
+* Step 4 - routes.rb
 ```ruby
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     # your routes here...
 end
 ```
 
-* Step 5 
+* Step 5 - application_controller.rb
 ```ruby
-application_controller.rb
-
 before_action :set_locale
 private
     def set_locale
@@ -49,8 +45,7 @@ def default_url_options
 end
 ```
 
-* Step 6 
-change Language
+* Step 6 - change Language
 ```ruby     
 <ul>
     <li><%= link_to 'English', root_path(locale: :en) %></li>
