@@ -1,5 +1,16 @@
-<h1><%= t 'welcome' %></h1>
+<h1 id='present'><%= t 'welcome' %></h1>
 <ul>
     <li><%= link_to 'English', root_path(locale: :en) %></li>
     <li><%= link_to 'Русский', root_path(locale: :ru) %></li>
 </ul>
+
+<script>
+$(document).ready(function(){
+    var a_message = "<%= I18n.t 'my_key' %>";
+    $('#present').mouseenter(function(){
+        alert(a_message);
+    }).mouseleave(function(){
+        alert(a_message);
+    });
+});
+</script>
