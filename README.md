@@ -7,10 +7,8 @@ You need Language change setting . Follow me
 gem 'rails-i18n'
 ```
 
-* Step 2 
+* Step 2 - config/application.rb
 ```ruby
-config/application.rb
- 
 config.i18n.available_locales = [:en, :ru]
 config.i18n.default_locale = :en
 ```
